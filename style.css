@@ -1,61 +1,45 @@
 html, body {
- margin: 3px;
+ margin: 0px;
  padding: 0;
- font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ font-family: 'Chathura', sans-serif;
  font-size: 12px;
 }
 
-.menu-container {
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:"header header header header"
+                      "hero hero hero hero"
+                      "nationlist nationlist nationlist ationlist";
+}
+.header-container {
+  grid-area: header;
+}
+.header-logo-container {
  padding: 0;
  margin: 0px;
- display: flex;
- justify-content: space-between;
+ max-height: 60px;
+ background-color: blanchedalmond;
 }
-.menu-logo {
- height: 60px;
-}
-.menu {
- display: flex;
- align-items: center;
- list-style: none;
- margin-right: 10px;
- padding: 0;
- margin: 0;
-}
-.menu a {
- text-decoration: none;
- margin-right: 15px;
+.header-logo {
+grid-column: 1fr 1fr 1fr;
+height: 60px;
 }
 
-.presentation-container {
-border: 3px solid red;
-border-radius: 10px;
-margin: 50px 0px;
-padding: 0;
-}
-
-.presentation-container h1{
-text-align: center;
-margin: 0;
-padding: 0;
-}
-
-.main-nations {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0px;
-/*   border: 3px solid red; */
+.hero-container {
+  grid-area: hero;
+  background-color: chocolate;
+  height: 200px;
 }
 .main-nations-container {
-flex-wrap: wrap;
-/* height: 100vw; */
+  grid-area: nationlist;
 justify-content: center;
 }
-.main-nations-list{
-justify-content: center;  
-Display: flex;
-flex-wrap: wrap;
+.main-nations {
+  justify-content: center;
+  margin: 0px;
+}
+.main-nations-list{ 
 list-style: none;
 margin: 0px;
 padding: 0px;
@@ -72,10 +56,6 @@ box-shadow: 0px 0px 3px 4px rgba(92,52,52,1);
   text-decoration: none;
   margin: 5px 5px 5px 5px;
   border: 1px dotted rgba(0, 0, 0, 0.336);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 
